@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  cost_estimator:
+    build: .
+    container_name: software_cost_tool
+    ports:
+      - "8080:80"

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="main-title">Software Cost Estimation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #374151; padding-bottom: 15px;">
+        <h1 style="margin: 0;" data-i18n="main-title">Software Cost Estimation Tool</h1>
+        <div>
+            <select id="langSelect" style="width: auto; margin: 0; padding: 8px 15px;">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('loc', event)">LOC/KLOC</button>
+        <button class="tab-btn" onclick="showTab('fp', event)">Function Point</button>
+        <button class="tab-btn" onclick="showTab('op', event)">Object Point</button>
+        <button class="tab-btn" onclick="showTab('cocomo', event)">COCOMO</button>
+        <button class="tab-btn" onclick="showTab('ucp', event)">Use Case Point</button>
+    </div>
+
+    <div class="tab-content active" id="loc">
+        <h2 data-i18n="loc-heading">LOC / KLOC Estimation</h2>
+        <input type="number" id="locSize" data-i18n-placeholder="placeholder-loc">
+        <input type="number" id="locProductivity" data-i18n-placeholder="placeholder-productivity">
+        <input type="number" id="locCost" data-i18n-placeholder="placeholder-cost-month">
+        <button onclick="calculateLOC()" data-i18n="btn-calculate">Calculate</button>
+        <div class="result" id="locResult"></div>
+    </div>
+
+    <div class="tab-content" id="fp">
+        <h2 data-i18n="fp-heading">Function Point</h2>
+        <h3 data-i18n="sub-inputs">User Inputs</h3>
+        <input type="number" id="eiCount" data-i18n-placeholder="placeholder-inputs-count">
+        <select id="eiComplexity">
+            <option value="3" data-i18n="opt-simple">Simple</option>
+            <option value="4" data-i18n="opt-average">Average</option>
+            <option value="6" data-i18n="opt-complex">Complex</option>
+        </select>
+
+        <h3 data-i18n="sub-outputs">User Outputs</h3>
+        <input type="number" id="eoCount" data-i18n-placeholder="placeholder-outputs-count">
+        <select id="eoComplexity">
+            <option value="4" data-i18n="opt-simple">Simple</option>
+            <option value="5" data-i18n="opt-average">Average</option>
+            <option value="7" data-i18n="opt-complex">Complex</option>
+        </select>
+
+        <h3 data-i18n="sub-inquiries">User Inquiries</h3>
+        <input type="number" id="eqCount" data-i18n-placeholder="placeholder-inquiries-count">
+        <select id="eqComplexity">
+            <option value="3" data-i18n="opt-simple">Simple</option>
+            <option value="4" data-i18n="opt-average">Average</option>
+            <option value="6" data-i18n="opt-complex">Complex</option>
+        </select>
+
+        <h3 data-i18n="sub-files">Files</h3>
+        <input type="number" id="ilfCount" data-i18n-placeholder="placeholder-files-count">
+        <select id="ilfComplexity">
+            <option value="7" data-i18n="opt-simple">Simple</option>
+            <option value="10" data-i18n="opt-average">Average</option>
+            <option value="15" data-i18n="opt-complex">Complex</option>
+        </select>
+
+        <h3 data-i18n="sub-interfaces">External Interfaces</h3>
+        <input type="number" id="eifCount" data-i18n-placeholder="placeholder-interfaces-count">
+        <select id="eifComplexity">
+            <option value="5" data-i18n="opt-simple">Simple</option>
+            <option value="7" data-i18n="opt-average">Average</option>
+            <option value="10" data-i18n="opt-complex">Complex</option>
+        </select>
+
+        <input type="number" id="fpFactor" data-i18n-placeholder="placeholder-factor">
+        <input type="number" id="fpEffort" data-i18n-placeholder="placeholder-effort">
+        <input type="number" id="fpCost" data-i18n-placeholder="placeholder-cost-month">
+        <button onclick="calculateFP()" data-i18n="btn-calculate">Calculate</button>
+        <div class="result" id="fpResult"></div>
+    </div>
+
+    <div class="tab-content" id="op">
+        <h2 data-i18n="op-heading">Object Point</h2>
+        <h3 data-i18n="sub-screens">Screens</h3>
+        <input type="number" id="screenCount" data-i18n-placeholder="placeholder-screens-count">
+        <select id="screenWeight">
+            <option value="1" data-i18n="opt-simple">Simple</option>
+            <option value="2" data-i18n="opt-medium">Medium</option>
+            <option value="3" data-i18n="opt-difficult">Difficult</option>
+        </select>
+
+        <h3 data-i18n="sub-reports">Reports</h3>
+        <input type="number" id="reportCount" data-i18n-placeholder="placeholder-reports-count">
+        <select id="reportWeight">
+            <option value="2" data-i18n="opt-simple">Simple</option>
+            <option value="5" data-i18n="opt-medium">Medium</option>
+            <option value="8" data-i18n="opt-difficult">Difficult</option>
+        </select>
+
+        <input type="number" id="reuse" data-i18n-placeholder="placeholder-reuse">
+        <select id="productivity">
+            <option value="4" data-i18n="opt-vlow">Very Low</option>
+            <option value="7" data-i18n="opt-low">Low</option>
+            <option value="13" data-i18n="opt-nominal">Nominal</option>
+            <option value="25" data-i18n="opt-high">High</option>
+            <option value="50" data-i18n="opt-vhigh">Very High</option>
+        </select>
+
+        <input type="number" id="opCost" data-i18n-placeholder="placeholder-cost-month">
+        <button onclick="calculateOP()" data-i18n="btn-calculate">Calculate</button>
+        <div class="result" id="opResult"></div>
+    </div>
+
+    <div class="tab-content" id="cocomo">
+        <h2 data-i18n="cocomo-heading">COCOMO</h2>
+        <input type="number" id="kloc" data-i18n-placeholder="placeholder-kloc">
+        <select id="projectType">
+            <option value="organic" data-i18n="opt-organic">Organic</option>
+            <option value="semi" data-i18n="opt-semi">Semi Detached</option>
+            <option value="embedded" data-i18n="opt-embedded">Embedded</option>
+        </select>
+        <input type="number" id="cocomoCost" data-i18n-placeholder="placeholder-cost-dev">
+        <button onclick="calculateCOCOMO()" data-i18n="btn-calculate">Calculate</button>
+        <div class="result" id="cocomoResult"></div>
+    </div>
+
+    <div class="tab-content" id="ucp">
+        <h2 data-i18n="ucp-heading">Use Case Point</h2>
+        <h3 data-i18n="sub-actors">Actors</h3>
+        <input type="number" id="simpleActors" data-i18n-placeholder="placeholder-s-actors">
+        <input type="number" id="averageActors" data-i18n-placeholder="placeholder-a-actors">
+        <input type="number" id="complexActors" data-i18n-placeholder="placeholder-c-actors">
+
+        <h3 data-i18n="sub-usecases">Use Cases</h3>
+        <input type="number" id="simpleUC" data-i18n-placeholder="placeholder-s-uc">
+        <input type="number" id="averageUC" data-i18n-placeholder="placeholder-a-uc">
+        <input type="number" id="complexUC" data-i18n-placeholder="placeholder-c-uc">
+
+        <input type="number" id="technicalFactor" data-i18n-placeholder="placeholder-tech-factor">
+        <input type="number" id="environmentFactor" data-i18n-placeholder="placeholder-env-factor">
+        <input type="number" id="productivityFactor" data-i18n-placeholder="placeholder-prod-factor">
+        <input type="number" id="ucpCost" data-i18n-placeholder="placeholder-cost-rate">
+        <button onclick="calculateUCP()" data-i18n="btn-calculate">Calculate</button>
+        <div class="result" id="ucpResult"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
