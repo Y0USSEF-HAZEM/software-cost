@@ -6,3 +6,4 @@ services:
     container_name: software_cost_tool
     ports:
       - "8080:80"
+      - "8443:443"
