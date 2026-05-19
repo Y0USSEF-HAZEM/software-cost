@@ -1,4 +1,3 @@
-// قاموس اللغات (Internationalization Dictionary)
 const dictionary = {
   en: {
     "main-title": "Software Cost Estimation Tool",
@@ -30,99 +29,83 @@ const dictionary = {
     "op-heading": "Object Point",
     "sub-screens": "Screens",
     "sub-reports": "Reports",
-    "placeholder-screens-count": "Number Of Screens",
-    "placeholder-reports-count": "Number Of Reports",
-    "placeholder-reuse": "Reuse Percentage",
-    "placeholder-cost-rate": "Cost Rate",
-    "opt-vlow": "Very Low",
-    "opt-low": "Low",
-    "opt-nominal": "Nominal",
-    "opt-high": "High",
-    "opt-vhigh": "Very High",
-    "cocomo-heading": "COCOMO",
-    "placeholder-kloc": "KLOC",
-    "placeholder-cost-dev": "Cost Per Developer / Month",
+    "placeholder-screens-count": "Screens Count",
+    "placeholder-reports-count": "Reports Count",
+    "placeholder-reuse": "Reuse % (0-100)",
+    "cocomo-heading": "COCOMO Model",
     "opt-organic": "Organic",
-    "opt-semi": "Semi Detached",
+    "opt-semidetached": "Semi-Detached",
     "opt-embedded": "Embedded",
     "ucp-heading": "Use Case Point",
     "sub-actors": "Actors",
-    "sub-usecases": "Use Cases",
     "placeholder-s-actors": "Simple Actors",
     "placeholder-a-actors": "Average Actors",
     "placeholder-c-actors": "Complex Actors",
+    "sub-usecases": "Use Cases",
     "placeholder-s-uc": "Simple Use Cases",
     "placeholder-a-uc": "Average Use Cases",
     "placeholder-c-uc": "Complex Use Cases",
-    "placeholder-tech-factor": "Technical Factor Total",
-    "placeholder-env-factor": "Environmental Factor Total",
-    "placeholder-prod-factor": "Productivity Factor",
+    "placeholder-tech-factor": "Technical Factor (0-50)",
+    "placeholder-env-factor": "Environment Factor (0-32)",
+    "total-cost-lbl": "Total Cost",
   },
   ar: {
-    "main-title": "برنامج تقدير تكاليف البرمجيات",
-    "btn-calculate": "احسب الآن",
+    "main-title": "أداة حساب تكاليف البرمجيات",
+    "btn-calculate": "احسب",
     "res-title": "النتائج",
-    "alert-missing": "برجاء إدخال جميع القيم المطلوبة",
-    "loc-heading": "التقدير بأسلوب أسطر الكود (LOC / KLOC)",
-    "placeholder-loc": "عدد أسطر الكود (LOC / KLOC)",
+    "alert-missing": "الرجاء إدخال جميع القيم",
+    "loc-heading": "حساب LOC / KLOC",
+    "placeholder-loc": "سطور الكود LOC / KLOC",
     "placeholder-productivity": "الإنتاجية",
     "placeholder-cost-month": "التكلفة شهرياً",
-    "fp-heading": "نقاط الوظائف (Function Point)",
+    "fp-heading": "نقاط الوظيفة (Function Point)",
     "sub-inputs": "مدخلات المستخدم",
     "sub-outputs": "مخرجات المستخدم",
     "sub-inquiries": "استعلامات المستخدم",
-    "sub-files": "الملفات الداخلية",
+    "sub-files": "الملفات الملفات الداخلية",
     "sub-interfaces": "الواجهات الخارجية",
     "placeholder-inputs-count": "عدد المدخلات",
     "placeholder-outputs-count": "عدد المخرجات",
     "placeholder-inquiries-count": "عدد الاستعلامات",
     "placeholder-files-count": "عدد الملفات",
     "placeholder-interfaces-count": "عدد الواجهات الخارجية",
-    "placeholder-factor": "عامل تعقيد المعالجة",
+    "placeholder-factor": "معامل تعقيد المعالجة",
     "placeholder-effort": "الجهد المبذول",
     "opt-simple": "بسيط",
     "opt-average": "متوسط",
     "opt-complex": "معقد",
-    "opt-medium": "متوسط التعقيد",
+    "opt-medium": "متوسط",
     "opt-difficult": "صعب",
-    "op-heading": "نقاط العناصر (Object Point)",
+    "op-heading": "نقاط الكائنات (Object Point)",
     "sub-screens": "الشاشات",
     "sub-reports": "التقارير",
     "placeholder-screens-count": "عدد الشاشات",
     "placeholder-reports-count": "عدد التقارير",
-    "placeholder-reuse": "نسبة إعادة الاستخدام (%)",
-    "placeholder-cost-rate": "معدل التكلفة",
-    "opt-vlow": "منخفض جداً",
-    "opt-low": "منخفض",
-    "opt-nominal": "طبيعي",
-    "opt-high": "عالي",
-    "opt-vhigh": "عالي جداً",
-    "cocomo-heading": "نموذج كوكومو الإحصائي (COCOMO)",
-    "placeholder-kloc": "عدد الأسطر بآلاف الـ KLOC",
-    "placeholder-cost-dev": "تكلفة المطور الواحد / شهرياً",
-    "opt-organic": "عضوي / بسيط (Organic)",
-    "opt-semi": "شبه منفصل (Semi Detached)",
-    "opt-embedded": "مدمج / معقد (Embedded)",
-    "ucp-heading": "نقاط حالات الاستخدام (Use Case Point)",
-    "sub-actors": "العناصر الفاعلة (Actors)",
-    "sub-usecases": "حالات الاستخدام (Use Cases)",
-    "placeholder-s-actors": "عناصر فاعلة بسيطة",
-    "placeholder-a-actors": "عناصر فاعلة متوسطة",
-    "placeholder-c-actors": "عناصر فاعلة معقدة",
+    "placeholder-reuse": "نسبة إعادة الاستخدام % (0-100)",
+    "cocomo-heading": "نموذج كوكومو (COCOMO)",
+    "opt-organic": "عضوي (Organic)",
+    "opt-semidetached": "شبه منفصل (Semi-Detached)",
+    "opt-embedded": "مدمج (Embedded)",
+    "ucp-heading": "نقاط حالات الاستخدام (UCP)",
+    "sub-actors": "الفواعل (Actors)",
+    "placeholder-s-actors": "فواعل بسيطة",
+    "placeholder-a-actors": "فواعل متوسطة",
+    "placeholder-c-actors": "فواعل معقدة",
+    "sub-usecases": "حالات الاستخدام",
     "placeholder-s-uc": "حالات استخدام بسيطة",
     "placeholder-a-uc": "حالات استخدام متوسطة",
     "placeholder-c-uc": "حالات استخدام معقدة",
-    "placeholder-tech-factor": "إجمالي العامل التقني",
-    "placeholder-env-factor": "إجمالي العامل البيئي",
-    "placeholder-prod-factor": "عامل الإنتاجية",
+    "placeholder-tech-factor": "العامل التقني (0-50)",
+    "placeholder-env-factor": "عامل البيئة (0-32)",
+    "total-cost-lbl": "التكلفة الإجمالية",
   },
   es: {
     "main-title": "Herramienta de Estimación de Costos",
     "btn-calculate": "Calcular",
     "res-title": "Resultados",
-    "alert-missing": "Por favor, introduzca todos los valores",
-    "loc-heading": "Estimación por LOC / KLOC",
-    "placeholder-loc": "Líneas de Código (LOC / KLOC)",
+    "alert-missing": "Por favor ingrese todos los valores",
+    "loc-heading": "Estimación LOC / KLOC",
+    "placeholder-loc": "Líneas de Código LOC / KLOC",
     "placeholder-productivity": "Productividad",
     "placeholder-cost-month": "Costo por Mes",
     "fp-heading": "Punto de Función",
@@ -135,8 +118,8 @@ const dictionary = {
     "placeholder-outputs-count": "Recuento de Salidas",
     "placeholder-inquiries-count": "Recuento de Consultas",
     "placeholder-files-count": "Recuento de Archivos",
-    "placeholder-interfaces-count": "Recuento de Interfaces",
-    "placeholder-factor": "Factor de Complejidad",
+    "placeholder-interfaces-count": "Recuento de Interfaces Externas",
+    "placeholder-factor": "Factor de Complejidad de Procesamiento",
     "placeholder-effort": "Esfuerzo",
     "opt-simple": "Simple",
     "opt-average": "Promedio",
@@ -146,222 +129,257 @@ const dictionary = {
     "op-heading": "Punto de Objeto",
     "sub-screens": "Pantallas",
     "sub-reports": "Informes",
-    "placeholder-screens-count": "Número de Pantallas",
-    "placeholder-reports-count": "Número de Informes",
-    "placeholder-reuse": "Porcentaje de Reutilización",
-    "placeholder-cost-rate": "Tasa de Costo",
-    "opt-vlow": "Muy Bajo",
-    "opt-low": "Bajo",
-    "opt-nominal": "Nominal",
-    "opt-high": "Alto",
-    "opt-vhigh": "Muy Alto",
+    "placeholder-screens-count": "Recuento de Pantallas",
+    "placeholder-reports-count": "Recuento de Informes",
+    "placeholder-reuse": "% de Reutilización (0-100)",
     "cocomo-heading": "Modelo COCOMO",
-    "placeholder-kloc": "KLOC",
-    "placeholder-cost-dev": "Costo por Desarrollador / Mes",
     "opt-organic": "Orgánico",
-    "opt-semi": "Semi-Acoplado",
+    "opt-semidetached": "Semi-Separado",
     "opt-embedded": "Incrustado",
     "ucp-heading": "Punto de Caso de Uso",
     "sub-actors": "Actores",
-    "sub-usecases": "Casos de Uso",
     "placeholder-s-actors": "Actores Simples",
     "placeholder-a-actors": "Actores Promedio",
     "placeholder-c-actors": "Actores Complejos",
+    "sub-usecases": "Casos de Uso",
     "placeholder-s-uc": "Casos de Uso Simples",
     "placeholder-a-uc": "Casos de Uso Promedio",
     "placeholder-c-uc": "Casos de Uso Complejos",
-    "placeholder-tech-factor": "Factor Técnico Total",
-    "placeholder-env-factor": "Factor Ambiental Total",
-    "placeholder-prod-factor": "Factor de Productividad",
+    "placeholder-tech-factor": "Factor Técnico (0-50)",
+    "placeholder-env-factor": "Factor de Entorno (0-32)",
+    "total-cost-lbl": "Costo Total",
+  },
+  fr: {
+    "main-title": "Outil d'Estimation des Coûts Logiciels",
+    "btn-calculate": "Calculer",
+    "res-title": "Résultats",
+    "alert-missing": "Veuillez entrer toutes les valeurs",
+    "loc-heading": "Estimation LOC / KLOC",
+    "placeholder-loc": "Lignes de code LOC / KLOC",
+    "placeholder-productivity": "Productivité",
+    "placeholder-cost-month": "Coût par mois",
+    "fp-heading": "Points de Fonction",
+    "sub-inputs": "Entrées Utilisateur",
+    "sub-outputs": "Sorties Utilisateur",
+    "sub-inquiries": "Interrogations",
+    "sub-files": "Fichiers",
+    "sub-interfaces": "Interfaces Externes",
+    "placeholder-inputs-count": "Nombre d'entrées",
+    "placeholder-outputs-count": "Nombre de sorties",
+    "placeholder-inquiries-count": "Nombre d'interrogations",
+    "placeholder-files-count": "Nombre de fichiers",
+    "placeholder-interfaces-count": "Nombre d'interfaces",
+    "placeholder-factor": "Facteur de Complexité",
+    "placeholder-effort": "Effort",
+    "opt-simple": "Simple",
+    "opt-average": "Moyen",
+    "opt-complex": "Complexe",
+    "opt-medium": "Moyen",
+    "opt-difficult": "Difficile",
+    "op-heading": "Points d'Objet",
+    "sub-screens": "Écrans",
+    "sub-reports": "Rapports",
+    "placeholder-screens-count": "Nombre d'écrans",
+    "placeholder-reports-count": "Nombre de rapports",
+    "placeholder-reuse": "% de Réutilisation (0-100)",
+    "cocomo-heading": "Modèle COCOMO",
+    "opt-organic": "Organique",
+    "opt-semidetached": "Semi-Détaché",
+    "opt-embedded": "Embarqué",
+    "ucp-heading": "Points de Cas d'Utilisation",
+    "sub-actors": "Acteurs",
+    "placeholder-s-actors": "Acteurs Simples",
+    "placeholder-a-actors": "Acteurs Moyens",
+    "placeholder-c-actors": "Acteurs Complexes",
+    "sub-usecases": "Cas d'Utilisation",
+    "placeholder-s-uc": "Cas Simples",
+    "placeholder-a-uc": "Cas Moyens",
+    "placeholder-c-uc": "Cas Complexes",
+    "placeholder-tech-factor": "Facteur Technique (0-50)",
+    "placeholder-env-factor": "Facteur Environnement (0-32)",
+    "total-cost-lbl": "Coût Total",
   },
 };
 
 let currentLang = "en";
 
-// دالة تفعيل وترجمة الصفحة بالكامل
-function changeLanguage(lang) {
+function updateLanguage(lang) {
   currentLang = lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   document.documentElement.lang = lang;
 
-  // ترجمة النصوص العادية
-  document.querySelectorAll("[data-i18n]").forEach((elem) => {
-    const key = elem.getAttribute("data-i18n");
-    if (dictionary[lang][key]) elem.textContent = dictionary[lang][key];
+  if (lang === "ar") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (dictionary[lang][key]) {
+      element.textContent = dictionary[lang][key];
+    }
   });
 
-  // ترجمة الـ Placeholders داخل الـ Inputs
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((elem) => {
-    const key = elem.getAttribute("data-i18n-placeholder");
-    if (dictionary[lang][key])
-      elem.setAttribute("placeholder", dictionary[lang][key]);
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    if (dictionary[lang][key]) {
+      element.setAttribute("placeholder", dictionary[lang][key]);
+    }
   });
-
-  // مسح النتائج السابقة لعدم تداخل اللغات
-  document.querySelectorAll(".result").forEach((r) => (r.innerHTML = ""));
 }
 
-// ربط الـ Select Selector بالحدث
 document.getElementById("langSelect").addEventListener("change", (e) => {
-  changeLanguage(e.target.value);
+  updateLanguage(e.target.value);
 });
 
-function showTab(tabId, e) {
-  const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => {
-    tab.classList.remove("active");
-  });
+window.addEventListener("DOMContentLoaded", () => {
+  updateLanguage("en");
+});
 
+function showTab(tabId, event) {
+  document
+    .querySelectorAll(".tab-content")
+    .forEach((tab) => tab.classList.remove("active"));
+  document
+    .querySelectorAll(".tab-btn")
+    .forEach((btn) => btn.classList.remove("active"));
   document.getElementById(tabId).classList.add("active");
-
-  const buttons = document.querySelectorAll(".tab-btn");
-  buttons.forEach((btn) => {
-    btn.classList.remove("active");
-  });
-
-  if (e && e.target) {
-    e.target.classList.add("active");
-  }
+  event.currentTarget.classList.add("active");
 }
 
-/* =========================
-   LOC / KLOC
-========================= */
 function calculateLOC() {
-  const size = parseFloat(document.getElementById("locSize").value);
-  const productivity = parseFloat(
-    document.getElementById("locProductivity").value,
-  );
+  const loc = parseFloat(document.getElementById("locInput").value);
+  const prod = parseFloat(document.getElementById("locProductivity").value);
   const cost = parseFloat(document.getElementById("locCost").value);
 
-  if (!size || !productivity || !cost) {
+  if (isNaN(loc) || isNaN(prod) || isNaN(cost)) {
     alert(dictionary[currentLang]["alert-missing"]);
     return;
   }
 
-  const effort = size / productivity;
+  const effort = loc / prod;
   const totalCost = effort * cost;
 
   document.getElementById("locResult").innerHTML = `
     <h3>${dictionary[currentLang]["res-title"]}</h3>
-    <p><strong>${currentLang === "ar" ? "الجهد:" : "Effort:"}</strong> ${effort.toFixed(2)} ${currentLang === "ar" ? "شخص-شهر" : "Person-Month"}</p>
-    <p><strong>${currentLang === "ar" ? "التكلفة الإجمالية:" : "Total Cost:"}</strong> $${totalCost.toFixed(2)}</p>
-    `;
+    <p><strong>${dictionary[currentLang]["placeholder-effort"]}:</strong> ${effort.toFixed(2)} PM</p>
+    <p><strong>${dictionary[currentLang]["total-cost-lbl"]}:</strong> $${totalCost.toFixed(2)}</p>
+  `;
 }
 
-/* =========================
-   FUNCTION POINT
-========================= */
 function calculateFP() {
-  const ei =
-    (parseFloat(document.getElementById("eiCount").value) || 0) *
-    parseFloat(document.getElementById("eiComplexity").value);
-  const eo =
-    (parseFloat(document.getElementById("eoCount").value) || 0) *
-    parseFloat(document.getElementById("eoComplexity").value);
-  const eq =
-    (parseFloat(document.getElementById("eqCount").value) || 0) *
-    parseFloat(document.getElementById("eqComplexity").value);
-  const ilf =
-    (parseFloat(document.getElementById("ilfCount").value) || 0) *
-    parseFloat(document.getElementById("ilfComplexity").value);
-  const eif =
-    (parseFloat(document.getElementById("eifCount").value) || 0) *
-    parseFloat(document.getElementById("eifComplexity").value);
+  const inputs = parseInt(document.getElementById("fpInputs").value) || 0;
+  const outputs = parseInt(document.getElementById("fpOutputs").value) || 0;
+  const inquiries = parseInt(document.getElementById("fpInquiries").value) || 0;
+  const files = parseInt(document.getElementById("fpFiles").value) || 0;
+  const interfaces =
+    parseInt(document.getElementById("fpInterfaces").value) || 0;
+  const factor = parseFloat(document.getElementById("fpFactor").value);
+  const cost = parseFloat(document.getElementById("fpCost").value);
 
-  const ufp = ei + eo + eq + ilf + eif;
-  const factor = parseFloat(document.getElementById("fpFactor").value) || 0;
-  const effort = parseFloat(document.getElementById("fpEffort").value) || 0;
-  const cost = parseFloat(document.getElementById("fpCost").value) || 0;
+  if (isNaN(factor) || isNaN(cost)) {
+    alert(dictionary[currentLang]["alert-missing"]);
+    return;
+  }
 
-  const vaf = 0.65 + 0.01 * factor;
-  const fp = ufp * vaf;
-  const productivity = fp / effort;
-  const totalCost = effort * cost;
-  const costPerFP = totalCost / fp;
+  const fpWeights = {
+    inputs: { simple: 3, average: 4, complex: 6 },
+    outputs: { simple: 4, average: 5, complex: 7 },
+    inquiries: { simple: 3, average: 4, complex: 6 },
+    files: { simple: 7, average: 10, complex: 15 },
+    interfaces: { simple: 5, average: 7, complex: 10 },
+  };
+
+  const compIn = document.getElementById("fpInputsComplexity").value;
+  const compOut = document.getElementById("fpOutputsComplexity").value;
+  const compInq = document.getElementById("fpInquiriesComplexity").value;
+  const compFile = document.getElementById("fpFilesComplexity").value;
+  const compInt = document.getElementById("fpInterfacesComplexity").value;
+
+  const ufp =
+    inputs * fpWeights.inputs[compIn] +
+    outputs * fpWeights.outputs[compOut] +
+    inquiries * fpWeights.inquiries[compInq] +
+    files * fpWeights.files[compFile] +
+    interfaces * fpWeights.interfaces[compInt];
+
+  const tcf = 0.65 + 0.01 * factor;
+  const fp = ufp * tcf;
+  const totalCost = fp * cost;
 
   document.getElementById("fpResult").innerHTML = `
     <h3>${dictionary[currentLang]["res-title"]}</h3>
-    <p><strong>UFP:</strong> ${ufp.toFixed(2)}</p>
-    <p><strong>VAF:</strong> ${vaf.toFixed(2)}</p>
+    <p><strong>UFP:</strong> ${ufp}</p>
+    <p><strong>TCF:</strong> ${tcf.toFixed(2)}</p>
     <p><strong>FP:</strong> ${fp.toFixed(2)}</p>
-    <p><strong>${currentLang === "ar" ? "الإنتاجية:" : "Productivity:"}</strong> ${productivity.toFixed(2)}</p>
-    <p><strong>${currentLang === "ar" ? "التكلفة الإجمالية:" : "Total Cost:"}</strong> $${totalCost.toFixed(2)}</p>
-    <p><strong>${currentLang === "ar" ? "تكلفة نقطة الوظيفة الواحدة:" : "Cost Per FP:"}</strong> $${costPerFP.toFixed(2)}</p>
-    `;
+    <p><strong>${dictionary[currentLang]["total-cost-lbl"]}:</strong> $${totalCost.toFixed(2)}</p>
+  `;
 }
 
-/* =========================
-   OBJECT POINT
-========================= */
 function calculateOP() {
-  const screens =
-    (parseFloat(document.getElementById("screenCount").value) || 0) *
-    parseFloat(document.getElementById("screenWeight").value);
-  const reports =
-    (parseFloat(document.getElementById("reportCount").value) || 0) *
-    parseFloat(document.getElementById("reportWeight").value);
+  const screens = parseInt(document.getElementById("opScreens").value) || 0;
+  const reports = parseInt(document.getElementById("opReports").value) || 0;
+  const reuse = parseFloat(document.getElementById("opReuse").value) || 0;
+  const prodRate = parseFloat(document.getElementById("opProdRate").value);
+  const cost = parseFloat(document.getElementById("opCost").value);
 
-  const op = screens + reports;
-  const reuse = parseFloat(document.getElementById("reuse").value) || 0;
-  const productivity = parseFloat(
-    document.getElementById("productivity").value,
-  );
-  const cost = parseFloat(document.getElementById("opCost").value) || 0;
+  if (isNaN(prodRate) || isNaN(cost)) {
+    alert(dictionary[currentLang]["alert-missing"]);
+    return;
+  }
 
-  const nop = op * ((100 - reuse) / 100);
-  const effort = nop / productivity;
+  const screenComp = document.getElementById("opScreensComplexity").value;
+  const reportComp = document.getElementById("opReportsComplexity").value;
+
+  const screenWeights = { simple: 1, medium: 2, difficult: 3 };
+  const reportWeights = { simple: 2, medium: 5, difficult: 8 };
+
+  const opCount =
+    screens * screenWeights[screenComp] + reports * reportWeights[reportComp];
+  const nop = opCount * (1 - reuse / 100);
+  const effort = nop / prodRate;
   const totalCost = effort * cost;
 
   document.getElementById("opResult").innerHTML = `
     <h3>${dictionary[currentLang]["res-title"]}</h3>
-    <p><strong>Object Points:</strong> ${op.toFixed(2)}</p>
-    <p><strong>New Object Points:</strong> ${nop.toFixed(2)}</p>
-    <p><strong>${currentLang === "ar" ? "الجهد:" : "Effort:"}</strong> ${effort.toFixed(2)} ${currentLang === "ar" ? "شخص-شهر" : "Person-Month"}</p>
-    <p><strong>${currentLang === "ar" ? "التكلفة الإجمالية:" : "Total Cost:"}</strong> $${totalCost.toFixed(2)}</p>
-    `;
+    <p><strong>Object Points:</strong> ${opCount}</p>
+    <p><strong>NOP:</strong> ${nop.toFixed(2)}</p>
+    <p><strong>${dictionary[currentLang]["placeholder-effort"]}:</strong> ${effort.toFixed(2)} PM</p>
+    <p><strong>${dictionary[currentLang]["total-cost-lbl"]}:</strong> $${totalCost.toFixed(2)}</p>
+  `;
 }
 
-/* =========================
-   COCOMO
-========================= */
 function calculateCOCOMO() {
-  const kloc = parseFloat(document.getElementById("kloc").value) || 0;
-  const type = document.getElementById("projectType").value;
-  const cost = parseFloat(document.getElementById("cocomoCost").value) || 0;
+  const mode = document.getElementById("cocomoMode").value;
+  const kloc = parseFloat(document.getElementById("cocomoKLOC").value);
+  const cost = parseFloat(document.getElementById("cocomoCost").value);
 
-  let a, b, c;
-  if (type === "organic") {
-    a = 2.4;
-    b = 1.05;
-    c = 0.38;
-  } else if (type === "semi") {
-    a = 3.0;
-    b = 1.12;
-    c = 0.35;
-  } else {
-    a = 3.6;
-    b = 1.2;
-    c = 0.32;
+  if (isNaN(kloc) || isNaN(cost)) {
+    alert(dictionary[currentLang]["alert-missing"]);
+    return;
   }
 
-  const effort = a * Math.pow(kloc, b);
-  const time = 2.5 * Math.pow(effort, c);
-  const teamSize = effort / time;
+  const params = {
+    organic: { a: 2.4, b: 1.05, c: 2.5, d: 0.38 },
+    semidetached: { a: 3.0, b: 1.12, c: 2.5, d: 0.35 },
+    embedded: { a: 3.6, b: 1.2, c: 2.5, d: 0.32 },
+  };
+
+  const p = params[mode];
+  const effort = p.a * Math.pow(kloc, p.b);
+  const time = p.c * Math.pow(effort, p.d);
+  const staff = effort / time;
   const totalCost = effort * cost;
 
   document.getElementById("cocomoResult").innerHTML = `
     <h3>${dictionary[currentLang]["res-title"]}</h3>
-    <p><strong>${currentLang === "ar" ? "الجهد:" : "Effort:"}</strong> ${effort.toFixed(2)} ${currentLang === "ar" ? "شخص-شهر" : "Person-Month"}</p>
-    <p><strong>${currentLang === "ar" ? "وقت التطوير:" : "Development Time:"}</strong> ${time.toFixed(2)} ${currentLang === "ar" ? "شهور" : "Months"}</p>
-    <p><strong>${currentLang === "ar" ? "حجم فريق العمل:" : "Team Size:"}</strong> ${teamSize.toFixed(2)} ${currentLang === "ar" ? "مطورين" : "Developers"}</p>
-    <p><strong>${currentLang === "ar" ? "التكلفة الإجمالية:" : "Total Cost:"}</strong> $${totalCost.toFixed(2)}</p>
-    `;
+    <p><strong>${dictionary[currentLang]["placeholder-effort"]}:</strong> ${effort.toFixed(2)} PM</p>
+    <p><strong>Time:</strong> ${time.toFixed(2)} Months</p>
+    <p><strong>Staff Required:</strong> ${staff.toFixed(2)} People</p>
+    <p><strong>${dictionary[currentLang]["total-cost-lbl"]}:</strong> $${totalCost.toFixed(2)}</p>
+  `;
 }
 
-/* =========================
-   USE CASE POINT
-========================= */
 function calculateUCP() {
   const simpleActors =
     (parseFloat(document.getElementById("simpleActors").value) || 0) * 1;
@@ -402,7 +420,7 @@ function calculateUCP() {
     <p><strong>TCF:</strong> ${tcf.toFixed(2)}</p>
     <p><strong>EF:</strong> ${ef.toFixed(2)}</p>
     <p><strong>UCP:</strong> ${ucp.toFixed(2)}</p>
-    <p><strong>${currentLang === "ar" ? "الجهد بالتوقيت:" : "Effort:"}</strong> ${effort.toFixed(2)} ${currentLang === "ar" ? "ساعة" : "Hours"}</p>
-    <p><strong>${currentLang === "ar" ? "التكلفة الإجمالية:" : "Total Cost:"}</strong> $${totalCost.toFixed(2)}</p>
-    `;
+    <p><strong>${dictionary[currentLang]["placeholder-effort"]}:</strong> ${effort.toFixed(2)} Hours</p>
+    <p><strong>${dictionary[currentLang]["total-cost-lbl"]}:</strong> $${totalCost.toFixed(2)}</p>
+  `;
 }

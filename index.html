@@ -6,7 +6,6 @@
     <title data-i18n="main-title">Software Cost Estimation</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
@@ -18,6 +17,7 @@
                 <option value="en">English</option>
                 <option value="ar">العربية</option>
                 <option value="es">Español</option>
+                <option value="fr">Français</option>
             </select>
         </div>
     </div>
@@ -32,7 +32,7 @@
 
     <div class="tab-content active" id="loc">
         <h2 data-i18n="loc-heading">LOC / KLOC Estimation</h2>
-        <input type="number" id="locSize" data-i18n-placeholder="placeholder-loc">
+        <input type="number" id="locInput" data-i18n-placeholder="placeholder-loc">
         <input type="number" id="locProductivity" data-i18n-placeholder="placeholder-productivity">
         <input type="number" id="locCost" data-i18n-placeholder="placeholder-cost-month">
         <button onclick="calculateLOC()" data-i18n="btn-calculate">Calculate</button>
@@ -42,47 +42,46 @@
     <div class="tab-content" id="fp">
         <h2 data-i18n="fp-heading">Function Point</h2>
         <h3 data-i18n="sub-inputs">User Inputs</h3>
-        <input type="number" id="eiCount" data-i18n-placeholder="placeholder-inputs-count">
-        <select id="eiComplexity">
-            <option value="3" data-i18n="opt-simple">Simple</option>
-            <option value="4" data-i18n="opt-average">Average</option>
-            <option value="6" data-i18n="opt-complex">Complex</option>
+        <input type="number" id="fpInputs" data-i18n-placeholder="placeholder-inputs-count">
+        <select id="fpInputsComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="average" data-i18n="opt-average">Average</option>
+            <option value="complex" data-i18n="opt-complex">Complex</option>
         </select>
 
         <h3 data-i18n="sub-outputs">User Outputs</h3>
-        <input type="number" id="eoCount" data-i18n-placeholder="placeholder-outputs-count">
-        <select id="eoComplexity">
-            <option value="4" data-i18n="opt-simple">Simple</option>
-            <option value="5" data-i18n="opt-average">Average</option>
-            <option value="7" data-i18n="opt-complex">Complex</option>
+        <input type="number" id="fpOutputs" data-i18n-placeholder="placeholder-outputs-count">
+        <select id="fpOutputsComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="average" data-i18n="opt-average">Average</option>
+            <option value="complex" data-i18n="opt-complex">Complex</option>
         </select>
 
         <h3 data-i18n="sub-inquiries">User Inquiries</h3>
-        <input type="number" id="eqCount" data-i18n-placeholder="placeholder-inquiries-count">
-        <select id="eqComplexity">
-            <option value="3" data-i18n="opt-simple">Simple</option>
-            <option value="4" data-i18n="opt-average">Average</option>
-            <option value="6" data-i18n="opt-complex">Complex</option>
+        <input type="number" id="fpInquiries" data-i18n-placeholder="placeholder-inquiries-count">
+        <select id="fpInquiriesComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="average" data-i18n="opt-average">Average</option>
+            <option value="complex" data-i18n="opt-complex">Complex</option>
         </select>
 
         <h3 data-i18n="sub-files">Files</h3>
-        <input type="number" id="ilfCount" data-i18n-placeholder="placeholder-files-count">
-        <select id="ilfComplexity">
-            <option value="7" data-i18n="opt-simple">Simple</option>
-            <option value="10" data-i18n="opt-average">Average</option>
-            <option value="15" data-i18n="opt-complex">Complex</option>
+        <input type="number" id="fpFiles" data-i18n-placeholder="placeholder-files-count">
+        <select id="fpFilesComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="average" data-i18n="opt-average">Average</option>
+            <option value="complex" data-i18n="opt-complex">Complex</option>
         </select>
 
         <h3 data-i18n="sub-interfaces">External Interfaces</h3>
-        <input type="number" id="eifCount" data-i18n-placeholder="placeholder-interfaces-count">
-        <select id="eifComplexity">
-            <option value="5" data-i18n="opt-simple">Simple</option>
-            <option value="7" data-i18n="opt-average">Average</option>
-            <option value="10" data-i18n="opt-complex">Complex</option>
+        <input type="number" id="fpInterfaces" data-i18n-placeholder="placeholder-interfaces-count">
+        <select id="fpInterfacesComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="average" data-i18n="opt-average">Average</option>
+            <option value="complex" data-i18n="opt-complex">Complex</option>
         </select>
 
         <input type="number" id="fpFactor" data-i18n-placeholder="placeholder-factor">
-        <input type="number" id="fpEffort" data-i18n-placeholder="placeholder-effort">
         <input type="number" id="fpCost" data-i18n-placeholder="placeholder-cost-month">
         <button onclick="calculateFP()" data-i18n="btn-calculate">Calculate</button>
         <div class="result" id="fpResult"></div>
@@ -91,44 +90,37 @@
     <div class="tab-content" id="op">
         <h2 data-i18n="op-heading">Object Point</h2>
         <h3 data-i18n="sub-screens">Screens</h3>
-        <input type="number" id="screenCount" data-i18n-placeholder="placeholder-screens-count">
-        <select id="screenWeight">
-            <option value="1" data-i18n="opt-simple">Simple</option>
-            <option value="2" data-i18n="opt-medium">Medium</option>
-            <option value="3" data-i18n="opt-difficult">Difficult</option>
+        <input type="number" id="opScreens" data-i18n-placeholder="placeholder-screens-count">
+        <select id="opScreensComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="medium" data-i18n="opt-medium">Medium</option>
+            <option value="difficult" data-i18n="opt-difficult">Difficult</option>
         </select>
 
         <h3 data-i18n="sub-reports">Reports</h3>
-        <input type="number" id="reportCount" data-i18n-placeholder="placeholder-reports-count">
-        <select id="reportWeight">
-            <option value="2" data-i18n="opt-simple">Simple</option>
-            <option value="5" data-i18n="opt-medium">Medium</option>
-            <option value="8" data-i18n="opt-difficult">Difficult</option>
+        <input type="number" id="opReports" data-i18n-placeholder="placeholder-reports-count">
+        <select id="opReportsComplexity">
+            <option value="simple" data-i18n="opt-simple">Simple</option>
+            <option value="medium" data-i18n="opt-medium">Medium</option>
+            <option value="difficult" data-i18n="opt-difficult">Difficult</option>
         </select>
 
-        <input type="number" id="reuse" data-i18n-placeholder="placeholder-reuse">
-        <select id="productivity">
-            <option value="4" data-i18n="opt-vlow">Very Low</option>
-            <option value="7" data-i18n="opt-low">Low</option>
-            <option value="13" data-i18n="opt-nominal">Nominal</option>
-            <option value="25" data-i18n="opt-high">High</option>
-            <option value="50" data-i18n="opt-vhigh">Very High</option>
-        </select>
-
+        <input type="number" id="opReuse" data-i18n-placeholder="placeholder-reuse">
+        <input type="number" id="opProdRate" data-i18n-placeholder="placeholder-productivity">
         <input type="number" id="opCost" data-i18n-placeholder="placeholder-cost-month">
         <button onclick="calculateOP()" data-i18n="btn-calculate">Calculate</button>
         <div class="result" id="opResult"></div>
     </div>
 
     <div class="tab-content" id="cocomo">
-        <h2 data-i18n="cocomo-heading">COCOMO</h2>
-        <input type="number" id="kloc" data-i18n-placeholder="placeholder-kloc">
-        <select id="projectType">
+        <h2 data-i18n="cocomo-heading">COCOMO Model</h2>
+        <select id="cocomoMode">
             <option value="organic" data-i18n="opt-organic">Organic</option>
-            <option value="semi" data-i18n="opt-semi">Semi Detached</option>
+            <option value="semidetached" data-i18n="opt-semidetached">Semi-Detached</option>
             <option value="embedded" data-i18n="opt-embedded">Embedded</option>
         </select>
-        <input type="number" id="cocomoCost" data-i18n-placeholder="placeholder-cost-dev">
+        <input type="number" id="cocomoKLOC" data-i18n-placeholder="placeholder-loc">
+        <input type="number" id="cocomoCost" data-i18n-placeholder="placeholder-cost-month">
         <button onclick="calculateCOCOMO()" data-i18n="btn-calculate">Calculate</button>
         <div class="result" id="cocomoResult"></div>
     </div>
@@ -147,8 +139,8 @@
 
         <input type="number" id="technicalFactor" data-i18n-placeholder="placeholder-tech-factor">
         <input type="number" id="environmentFactor" data-i18n-placeholder="placeholder-env-factor">
-        <input type="number" id="productivityFactor" data-i18n-placeholder="placeholder-prod-factor">
-        <input type="number" id="ucpCost" data-i18n-placeholder="placeholder-cost-rate">
+        <input type="number" id="productivityFactor" data-i18n-placeholder="placeholder-productivity">
+        <input type="number" id="ucpCost" data-i18n-placeholder="placeholder-cost-month">
         <button onclick="calculateUCP()" data-i18n="btn-calculate">Calculate</button>
         <div class="result" id="ucpResult"></div>
     </div>
